@@ -60,6 +60,7 @@ mqttc.on_subscribe = on_subscribe
 mqttc.connect("test.mosquitto.org", 1883, 60)
 mqttc.subscribe("paho/test/pi-speed1", 0)
 mqttc.subscribe("paho/test/pi-speed2", 0)
+mqttc.subscribe("paho/test/pi-temp", 0)
 
 
 mqttc.loop_forever()
