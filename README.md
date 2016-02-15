@@ -15,4 +15,5 @@ I am currently running these in crontab and sending the data to the following ch
 paho/test/pi-speed1
 paho/test/pi-temp
  
+ test
 
