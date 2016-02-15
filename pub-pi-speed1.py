@@ -33,7 +33,7 @@ except ImportError:
     import paho.mqtt.publish as publish
 
 
-proc=subprocess.Popen('/home/pi/org.eclipse.paho.mqtt.python/examples/test.sh', shell=True, stdout=subprocess.PIPE, )
+proc=subprocess.Popen('/home/pi/scripts/get-last-speedlog-result.sh', shell=True, stdout=subprocess.PIPE, )
 pl=proc.communicate()[0]
 pl=pl.strip()
 
