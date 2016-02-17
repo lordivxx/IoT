@@ -1,0 +1,9 @@
+There are several brokers out there that can be configured and set up to run your own MQTT network.
+
+One option is HiveMQ. It’s an enterprise broker that you can run in your own machine. You can download the setup at their website http://www.hivemq.com/. Do check out the documentation, which has installation instructions too. Once you’ve installed it, run it on a machine, and let your clients connect to the machine’s IP address and port 1883 (by default). The code remains exactly the same as before.
+
+Another option is CloudMQTT (http://www.cloudmqtt.com/) This is a hosted service, which means the broker is on the cloud. When you create an account and add an instance, you’ll get your own special broker in the cloud. A sample code is for a client connecting to their broker is here – http://www.cloudmqtt.com/docs-python.html
+
+Both these services are free to use for a few connections, and paid thereafter. I can’t say which is better, but both have their advantages and disadvantages. HiveMQ has been built from the ground up, and has a lot of plug-ins and features that make it easy to monitor, secure and fast. CloudMQTT is on the cloud, and it’s quick to start off since you don’t need to worry about managing your own broker.
+
+Note that both these options let you have your own private broker. Previously, the broker we used for a public broker where anyone could publish and subscribe.
