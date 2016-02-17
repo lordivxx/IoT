@@ -1,3 +1,2 @@
-#!/bin/bash
-
-sudo pip install paho-mqtt
+yum install python-pip
+pip install paho-mgtt
