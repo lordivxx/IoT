@@ -1,5 +1,10 @@
 There are several brokers out there that can be configured and set up to run your own MQTT network.
 
+The two free ones I use in my examples are: (these are public)
+test.mosquitto.org
+iot.eclipse.org
+
+
 One option is HiveMQ. It’s an enterprise broker that you can run in your own machine. You can download the setup at their website http://www.hivemq.com/. Do check out the documentation, which has installation instructions too. Once you’ve installed it, run it on a machine, and let your clients connect to the machine’s IP address and port 1883 (by default). The code remains exactly the same as before.
 
 Another option is CloudMQTT (http://www.cloudmqtt.com/) This is a hosted service, which means the broker is on the cloud. When you create an account and add an instance, you’ll get your own special broker in the cloud. A sample code is for a client connecting to their broker is here – http://www.cloudmqtt.com/docs-python.html
