@@ -23,9 +23,9 @@ def on_connect(mqttc, obj, flags, rc):
     print("rc: "+str(rc))
 
 def on_message(mqttc, obj, msg):
-    print(msg.topic+" "+str(msg.qos)+" "+str(msg.payload))
+#    print(msg.topic+" "+str(msg.qos)+" "+str(msg.payload))
     with open("/home/pi/IoT/sub-out.log", "a") as text_file:
-    	text_file.write("%s\n" % str(msg.payload))
+    	text_file.write("%s %s\n" % (str(msg.topic),str(msg.payload)))
 
 def on_publish(mqttc, obj, mid):
     print("mid: "+str(mid))
