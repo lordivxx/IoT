@@ -1,0 +1,35 @@
+#! /bin/sh
+# /etc/init.d/sub-write
+#
+### BEGIN INIT INFO
+# Provides:          sub-write
+# Required-Start:    
+# Required-Stop:     
+# Should-Start:      $named
+# Default-Start:     2
+# Default-Stop:
+# Short-Description: Deaom script to subscribe to MQTT data channels and write them to a log
+# Description:       Deaom script to subscribe to MQTT data channels and write them to a log
+### END INIT INFO
+
+
+# Some things that run always
+touch /var/lock/sub-write
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting script sub-write "
+    /home/pi/IoT/sub-write.py &
+    ;;
+  stop)
+    echo "Stopping script sub-write"
+    /usr/bin/pkill sub-write.py
+    ;;
+  *)
+    echo "Usage: /etc/init.d/sub-write {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
