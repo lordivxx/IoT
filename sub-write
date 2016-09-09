@@ -26,8 +26,17 @@ case "$1" in
     echo "Stopping script sub-write"
     /usr/bin/pkill sub-write.py
     ;;
+  restart)
+    echo "Restarting script sub-write"
+    echo "Running pkill on sub-write.py ..."
+    /usr/bin/pkill sub-write.py
+    echo "Done"
+    echo "Starting script /home/pi/IoT/sub-write.py in background mode ..."
+    /home/pi/IoT/sub-write.py &
+    echo "Done"
+    ;;
   *)
-    echo "Usage: /etc/init.d/sub-write {start|stop}"
+    echo "Usage: /etc/init.d/sub-write {start|restart|stop}"
     exit 1
     ;;
 esac
